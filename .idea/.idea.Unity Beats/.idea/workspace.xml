@@ -2,10 +2,166 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90968f60-be87-4dfd-9d52-89b741833153" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/First.unity" afterPath="$PROJECT_DIR$/Assets/First.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Movement.cs" afterPath="$PROJECT_DIR$/Assets/Movement.cs" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Beats/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Beats/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity Beats/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Unity Beats/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/First.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/First.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/vehicle_playerShip_glass_mat.mat" afterPath="$PROJECT_DIR$/Assets/Materials/vehicle_playerShip_glass_mat.mat" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_01.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_01.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_02.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_02.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_03.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/prop_asteroid_03.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_enemyShip.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_enemyShip.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_playerShip.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_playerShip.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_playerShip_collider.FBX" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/vehicle_playerShip_collider.FBX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Movement.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Movement.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Engines.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Engines/engines_enemy.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Engines/engines_enemy.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Engines/engines_player.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Engines/engines_player.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_asteroid.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_asteroid.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_enemy.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_enemy.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_player.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Explosions/explosion_player.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Starfield.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Starfield/StarField.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/Starfield/StarField.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/cube_junkyard_sharp.cubemap" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/cube_junkyard_sharp.cubemap.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/cube_junkyard_soft.cubemap" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/cube_junkyard_soft.cubemap.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/fx_lazer_cyan_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/fx_lazer_cyan_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/fx_lazer_orange_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/fx_lazer_orange_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_enginePulse_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_enginePulse_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_flash_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_flash_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_jet_core_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_jet_core_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_jet_flare_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_jet_flare_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_shockwave_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_shockwave_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_spark_large_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_spark_large_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_spark_small_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_spark_small_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_star_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/part_star_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_01_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_01_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_01_nrm.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_01_nrm.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_02_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_02_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_02_nrm.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_02_nrm.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_03_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_03_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_03_nrm.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/prop_asteroid_03_nrm.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/tile_nebula_green_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/tile_nebula_green_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_nrm.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_nrm.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_purple_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_purple_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_red_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_enemyShip_red_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_playerShip_orange_dff.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_playerShip_orange_dff.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_playerShip_orange_nrm.tif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/vehicle_playerShip_orange_nrm.tif.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Space-Shooter.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Space-Shooter.png.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game.meta" afterPath="$PROJECT_DIR$/Assets/_Complete-Game.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_fx_bolt_cyan_mat.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_fx_bolt_cyan_mat.mat.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_fx_bolt_orange_mat.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_fx_bolt_orange_mat.mat.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_tile_nebula_green_dff.mat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Materials/done_tile_nebula_green_dff.mat.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 01.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 01.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 02.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 02.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 03.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Asteroid 03.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Bolt-Enemy.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Bolt-Enemy.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Bolt.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Bolt.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Enemy Ship.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Enemy Ship.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Player.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_Player.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_asteroid.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_asteroid.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_enemy.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_enemy.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_player.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Prefabs/Done_VFX/Done_Explosions/done_explosion_player.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scenes.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scenes/Done_Main.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scenes/Done_Main.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts.meta" afterPath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_BGScroller.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_BGScroller.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByBoundary.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByBoundary.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByContact.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByContact.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByTime.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_DestroyByTime.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_EvasiveManeuver.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_EvasiveManeuver.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_GameController.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_GameController.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_Mover.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_Mover.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_PlayerController.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_PlayerController.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_RandomRotator.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_RandomRotator.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_WeaponController.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/Scripts/Done_WeaponController.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/_Complete-Game.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Complete-Game/_Complete-Game.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,37 +170,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Movement.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Movement.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding>
-                <marker date="1522528007310" expanded="false" signature="6:78" ph="..." />
-                <marker date="1522528007310" expanded="true" signature="118:1294" ph="{...}" />
-                <marker date="1522528007310" expanded="true" signature="312:427" ph="{...}" />
-                <marker date="1522528007310" expanded="true" signature="477:1074" ph="{...}" />
-                <marker date="1522528007310" expanded="true" signature="967:1071" ph="{...}" />
-                <marker date="1522528007310" expanded="true" signature="1095:1292" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Movement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/PotionComponent.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/Item.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/ItemController.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/ModifyDetectionComponent.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/CursorChange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/GameOver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/EmpComponent.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/ItemBaseComponent.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/PlayerCollisionControlle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/Potion.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/EMP.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/PlayerAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/InvisibilityCloak.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/InvisibilityCloakComponent.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Script/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/TargetPointerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/CursorChange.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Action.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/CollisionControlle.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/GameOver.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/PlayerCollisionControlle.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/PlayerAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Script/Enemy.cs" />
+        <option value="$PROJECT_DIR$/../HSAKA_Info_2017 (2)/Assets/_Scripts/Items/ItemBaseComponent.cs" />
       </list>
     </option>
   </component>
@@ -54,10 +219,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1700" />
+    <option name="width" value="974" />
     <option name="height" value="1167" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -74,13 +242,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Unity Beats (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Unity Beats (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -88,11 +255,12 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />
   </component>
   <component name="RunDashboard">
@@ -125,11 +293,16 @@
       <updated>1522145452958</updated>
       <workItem from="1522145457424" duration="366000" />
       <workItem from="1522517816280" duration="10178000" />
+      <workItem from="1522576304610" duration="2207000" />
+      <workItem from="1522763906150" duration="14973000" />
+      <workItem from="1523015424089" duration="680000" />
+      <workItem from="1523185238306" duration="178000" />
+      <workItem from="1523185431446" duration="1555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10544000" />
+    <option name="totallyTimeSpent" value="30137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -141,7 +314,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1167" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -151,7 +325,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18475991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -175,37 +349,5 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Movement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522528007310" expanded="false" signature="6:78" ph="..." />
-            <marker date="1522528007310" expanded="true" signature="118:1294" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="312:427" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="477:1074" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="967:1071" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="1095:1292" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Movement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <marker date="1522528007310" expanded="false" signature="6:78" ph="..." />
-            <marker date="1522528007310" expanded="true" signature="118:1294" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="312:427" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="477:1074" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="967:1071" ph="{...}" />
-            <marker date="1522528007310" expanded="true" signature="1095:1292" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
