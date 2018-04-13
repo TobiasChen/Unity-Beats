@@ -7,10 +7,9 @@ public class EnemySpawner : MonoBehaviour
     public List<Vector3> Spawnposition;
     public int SpawnCount;
     public List<GameObject> Enemy;
-    public Rigidbody2D Ship;
     public Camera Camera;
     public float TimeBetweenWaves = 5f;
-    int SpawnedShips = 0;
+    public int MaxWaveSize = 5;
     
     private void Start()
     {
@@ -60,7 +59,7 @@ public class EnemySpawner : MonoBehaviour
     {
         //Get a random position and Shipcount for the wave
         var position = Spawnposition[Random.Range(0, Spawnposition.Count)];
-        var wavesize = Random.Range(1, 5);
+        var wavesize = Random.Range(1, MaxWaveSize);
         //Calls to spawn a number of new ships equal to the defined Wavesize
         for (var i = 1; i <= wavesize; i++)
             yield return StartCoroutine(Wavespawn(position));
