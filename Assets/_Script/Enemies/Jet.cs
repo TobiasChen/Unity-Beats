@@ -11,5 +11,11 @@ public class Jet : Enemy {
     public override Sprite GetSprite()
     {
         return Resources.Load("_Sprites/Ships/shpsall_2") as Sprite;
+        
+    }
+
+    public override int GetHealthPoints()
+    {
+        return 50;
     }
 }

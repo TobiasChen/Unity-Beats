@@ -13,8 +13,6 @@ public class PlayerCollisionControlle : MonoBehaviour
 		BC2d = GetComponent<BoxCollider2D>();
 		PC = GetComponent<PlayerController>();
 		GO = GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<GameOver>();
-		print(PC);
-		print(GO);
 	}
 
 	// Update is called once per frame
@@ -22,8 +20,10 @@ public class PlayerCollisionControlle : MonoBehaviour
 	{
 
 	}
-	private void OnCollisionEnter2D(Collision2D other)
+
+	private void OnTriggerEnter2D(Collider2D other)
 	{
+		//print("Collision");
 		if (other.gameObject.tag == "enemy")
 		{
 			if (PC.PlayerHealthPoints >= 1)
