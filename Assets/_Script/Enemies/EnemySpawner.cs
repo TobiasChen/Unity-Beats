@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public List<Vector3> Spawnposition;
-    public int SpawnCount;
-    public List<GameObject> Enemy;
-    public Camera Camera;
-    public float TimeBetweenWaves = 5f;
+    private Camera Camera;
+    private List<Vector3> Spawnposition;
+    
     public int MaxWaveSize = 5;
+    public int SpawnCount;
+    public float TimeBetweenWaves = 5f;
+    public List<GameObject> Enemy;
+    public AnimationCurve curve;
+    
     
     private void Start()
     {
@@ -33,12 +36,10 @@ public class EnemySpawner : MonoBehaviour
                 float PercentageAngle = ((float)i / (float)SpawnCount) * 360f - (1f / SpawnCount * 360f);
                 //Converts the Angle to Radiants
                 float PercentageRadiant = Mathf.Deg2Rad * PercentageAngle;
-                print("AnglePercentage: " + PercentageAngle);
                 //Finds the position of the Current percentage on the circle with the above defined radius and add it to the List of Spawnpositions
                 var x = Mathf.Cos(PercentageRadiant) * radius;
                 var y = Mathf.Sin(PercentageRadiant) * radius;
                 Spawnposition.Add(new Vector3(x, y, 0));
-                print("Spawnposition[" + i + "]: " + Spawnposition[i-1]);
             }
             //Starts the Spawning of new Ships
             StartCoroutine(WaveTimer());
@@ -59,7 +60,9 @@ public class EnemySpawner : MonoBehaviour
     {
         //Get a random position and Shipcount for the wave
         var position = Spawnposition[Random.Range(0, Spawnposition.Count)];
-        var wavesize = Random.Range(1, MaxWaveSize);
+        var wavesize = Mathf.Round(MaxWaveSize * curve.Evaluate((Random.value)));
+        print("Ship Count: " + wavesize);
+
         //Calls to spawn a number of new ships equal to the defined Wavesize
         for (var i = 1; i <= wavesize; i++)
             yield return StartCoroutine(Wavespawn(position));
