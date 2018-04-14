@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     private Camera Camera;
-    private List<Vector3> Spawnposition;
+    public List<Vector3> Spawnposition;
     
     public int MaxWaveSize = 5;
     public int SpawnCount;
@@ -39,11 +39,16 @@ public class EnemySpawner : MonoBehaviour
                 //Finds the position of the Current percentage on the circle with the above defined radius and add it to the List of Spawnpositions
                 var x = Mathf.Cos(PercentageRadiant) * radius;
                 var y = Mathf.Sin(PercentageRadiant) * radius;
-                Spawnposition.Add(new Vector3(x, y, 0));
+               Spawnposition.Add(new Vector3(x, y, 0));
             }
             //Starts the Spawning of new Ships
             StartCoroutine(WaveTimer());
         }
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     IEnumerator WaveTimer()

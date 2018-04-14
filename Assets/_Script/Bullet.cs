@@ -2,39 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
-{
-	public float speed = 1200f;
-	private Rigidbody2D rb2d;
-
-	public float TimeoutDestructor = 2f;
-	// Use this for initialization
-	void Start ()
+public class Bullet : PooledObject {
+	public override string GetName()
 	{
-		rb2d = transform.GetComponent<Rigidbody2D>();
-		rb2d.AddForce(transform.right * speed);
-		//rb2d.AddForce(transform.forward);
+		return "bullet";
 	}
-	
-	// Update is called once per frame
-	void Update () 
+	public override GameObject GetObject()
 	{
-		if (TimeoutDestructor >= 0)
-		{
-			TimeoutDestructor -= Time.deltaTime;
-		}
-		else
-		{
-			Destroy(gameObject);
-		}
-		//rb2d.AddForce(transform.forward);
+		return Resources.Load<GameObject>("Prefabs/Bullet");
 	}
-
-	private void OnTriggerEnter2D(Collider2D other)
+	public override int GetAmount()
 	{
-		if (other.tag == "enemy")
-		{
-			//other.GetComponent<>();
-		}
+		return 50;
+	}
+	public override bool GetCanGrow()
+	{
+		return true;
+	}
+	public override bool GetCreateOnAwake()
+	{
+		return true;
 	}
 }

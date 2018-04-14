@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
-	public Rigidbody2D BulletProjectile;
+	public GameObject BulletProjectile;
 
 	private float FireDelay;
 	private PlayerController PC;
+
+	private ObjectPooler OP;
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
+		OP = GetComponent<ObjectPooler>();
+		OP.PooledObject = new Bullet();
+		OP.enabled = true;
 		PC = GetComponent<PlayerController>();
 	}
 	
@@ -19,8 +24,7 @@ public class PlayerAction : MonoBehaviour
 	{
 		if (Input.GetButton("Fire1") && FireDelay == 0)
 		{
-			Instantiate(BulletProjectile, transform.position, transform.rotation);
-			FireDelay =PC.TimeBetweenShots;
+			Fire();
 		}
 
 		if (FireDelay > 0)
@@ -29,5 +33,13 @@ public class PlayerAction : MonoBehaviour
 		{
 			FireDelay = 0;
 		}
+	}
+
+	void Fire()
+	{
+		GameObject obj = OP.GetPooledObject();
+		obj.transform.position = transform.position;
+		obj.transform.rotation = transform.rotation;
+		obj.SetActive(true);
 	}
 }

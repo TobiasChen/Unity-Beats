@@ -37,7 +37,7 @@ public class EnemyBehaviour : MonoBehaviour
 			{
 				Death();
 			}
-			Destroy(other.gameObject);
+			other.gameObject.GetComponent<BulletComponent>().Destroy();
 		}
 	}
 
