@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="_Script" t="Include">
           <e p="Bullet.cs" t="Include" />
+          <e p="BulletComponent.cs" t="Include" />
           <e p="CursorChange.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="Enemy.cs" t="Include" />
@@ -17,10 +18,12 @@
             <e p="JetBehaviour.cs" t="Include" />
           </e>
           <e p="GameOver.cs" t="Include" />
+          <e p="ObjectPooler.cs" t="Include" />
           <e p="PlayerAction.cs" t="Include" />
           <e p="PlayerCollisionControlle.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PooledObject.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">

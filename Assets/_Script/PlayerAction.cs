@@ -5,17 +5,13 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
 	public GameObject BulletProjectile;
-
 	private float FireDelay;
 	private PlayerController PC;
 
-	private ObjectPooler OP;
 	// Use this for initialization
 	void Start ()
 	{
-		OP = GetComponent<ObjectPooler>();
-		OP.PooledObject = new Bullet();
-		OP.enabled = true;
+		SimplePool.Preload(BulletProjectile, 200);
 		PC = GetComponent<PlayerController>();
 	}
 	
@@ -37,9 +33,6 @@ public class PlayerAction : MonoBehaviour
 
 	void Fire()
 	{
-		GameObject obj = OP.GetPooledObject();
-		obj.transform.position = transform.position;
-		obj.transform.rotation = transform.rotation;
-		obj.SetActive(true);
+		SimplePool.Spawn(BulletProjectile, transform.position, transform.rotation);
 	}
 }

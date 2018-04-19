@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class JetBehaviour : EnemyBehaviour
 {
-	public JetBehaviour()
+	public float JetMovementSpeed;
+	public int JetHP;
+
+	public override void Start()
 	{
-		Movementspeed = 20f;
-		Hp = 10;
-		
+		base.Start();	
+		Movementspeed = JetMovementSpeed;
+		HP = JetHP;
 	}
-	
+
+	public override void OnEnable()
+	{
+		HP = JetHP;
+	}
 }

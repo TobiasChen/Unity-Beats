@@ -3,63 +3,139 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+
+public static class SimplePool
 {
-	public PooledObject PooledObject;
-	public List<GameObject> PooledObjects = new List<GameObject>();
-	public List<GameObject> NotActiveObjects = new List<GameObject>();
-
-	private void Start()
+	private static GameObject DynamicFolder = GameObject.FindGameObjectWithTag("DynamicFolder");
+	
+	private const int DEFAULT_POOL_SIZE = 25;
+	class Pool
 	{
-		if (PooledObject.GetCreateOnAwake())
+		private int nextID = 0;
+		//The Stack the Gameobjects are gpomg to be put on
+		private Stack<GameObject> inactivePool;
+		//The Gameobject, that is pooled in this Pool instance
+		private GameObject prefab;
+		
+		
+		public Pool(GameObject prefab, int initialQty)
 		{
-			Populate();
+			this.prefab = prefab;
+			inactivePool = new Stack<GameObject>(initialQty);
 		}
-	}
 
-	void Populate()
-	{
-		PooledObjects.Clear();
-		for (int i = 0; i < PooledObject.GetAmount(); i++)
-		{
-			AddObjectToList();
-		}
-	}
 
-	void AddObjectToList()
-	{	
-			GameObject obj = Instantiate(PooledObject.GetObject());
-			obj.SetActive(false);
-			NotActiveObjects.Add(obj);
-	}
-	public GameObject GetPooledObject()
-	{
-		int i = NotActiveObjects.Count;
-		if (i <= 0)
+		public GameObject Spawn(Vector3 position, Quaternion rotation)
 		{
-			if (PooledObject.GetCanGrow())
-			{	
-				//No Objects left in Pool: Adding new
-				AddObjectToList();
-				//Could be replaced by i = i+1 or i++
-				i = NotActiveObjects.Count;
+			GameObject obj;
+			if (inactivePool.Count == 0)
+			{
+				
+				//If the pool is empty a new Gameobject is spawned and then immediatly returned
+				//It is also now attached to an empty GameObject, which in Turn is the child of the Dynamic Folder, to keep the working Directorie clean
+				obj = GameObject.Instantiate(prefab, position, rotation, dictionaryOfFolders[prefab].transform);
+				//The Name is changed by adding the current ID, to keep Track
+				obj.name = prefab.name + " (" + (nextID++) + ")";
+				//The new Object gets added to the PoolMember class, and the pool it is spawned in is saved
+				obj.AddComponent<PoolMember>().myPool = this;
 			}
 			else
 			{
-				//No Objects left in Pool and growth is not allowed, exiting.
-				return null;
+				obj = inactivePool.Pop();
+				if (obj == null)
+				{
+					return Spawn(position, rotation);
+				}
+			}
+
+			obj.transform.position = position;
+			obj.transform.rotation = rotation;
+			obj.SetActive(true);
+			return obj;
+		}
+
+		public void despawn(GameObject obj)
+		{
+			obj.SetActive(false);
+			//The Objects get added on the top of the unused Stack
+			inactivePool.Push(obj);
+		}
+	}
+	// A Class for all Pooled Objects
+	class PoolMember : MonoBehaviour
+	{
+		public Pool myPool;
+		
+	}
+	//A Dictionary of all current Pools, there can be only one Pool per Gameobject/Prefab
+	private static Dictionary<GameObject,  Pool> dictionaryOfPools;
+	//Dictionary for the Folders of the new GameObjects
+	private static Dictionary<GameObject, GameObject> dictionaryOfFolders;
+	//The initialisation of the Dictionary,
+	public static void Init(GameObject prefab = null, int size = DEFAULT_POOL_SIZE)
+	{
+		//Creates the Dictionarys if they are not present
+		if (dictionaryOfPools == null)
+		{
+			dictionaryOfPools = new Dictionary<GameObject, Pool>();
+		}
+		if (dictionaryOfFolders == null)
+		{
+			dictionaryOfFolders = new  Dictionary<GameObject, GameObject>();
+		}
+		//If the prefab that is supposed to be spawned is not NULL, the two new keys are added to the dictionary
+		if (prefab != null)
+		{
+			if (dictionaryOfPools.ContainsKey(prefab) == false)
+			{
+				//Firstly a new Pool class is instaniated
+				dictionaryOfPools[prefab] = new Pool(prefab, size);
+			}
+
+			if (dictionaryOfFolders.ContainsKey(prefab) == false)
+			{
+				//And a new empty GameObject is instantiated, the Dynamic Folder is set as its parent, its added to the Dictionary, and the Name is changed
+				GameObject go = new GameObject();
+				go.transform.SetParent(DynamicFolder.transform);
+				dictionaryOfFolders[prefab] = go;
+				dictionaryOfFolders[prefab].name = prefab.name + "s";
 			}
 		}
-		//move Object from InActive to Active pool, return the active object.
-		PooledObjects.Add(NotActiveObjects[i - 1]);
-		NotActiveObjects.RemoveAt(i - 1);
-		return PooledObjects[PooledObjects.Count - 1];
-
 	}
 
-	public void ReturnPooledObject()
+	public static void Preload(GameObject prefab, int size = 1)
 	{
-		NotActiveObjects.Add(PooledObjects[0]);
-		PooledObjects.RemoveAt(0);
+		Init(prefab, size);
+			GameObject[] obs = new GameObject[size];
+		for (int i = 0; i < size; i++) 
+		{
+			obs[i] = Spawn (prefab, Vector3.zero, Quaternion.identity);
+		}
+
+		// Now despawn them all.
+		for (int i = 0; i < size; i++) 
+		{
+			Despawn(obs[i]);
+		}
+	}
+
+	public static GameObject Spawn(GameObject prefab, Vector3 pos, Quaternion rot)
+	{
+		Init(prefab);
+		return dictionaryOfPools[prefab].Spawn(pos, rot);
+	}
+
+	public static void Despawn(GameObject obj)
+	{
+		PoolMember pm = obj.GetComponent<PoolMember>();
+		if (pm == null)
+		{
+		Debug.Log ("Object '" +obj.name+ "' wasn't spawned from a pool. Destroying it instead.");
+		GameObject.Destroy(obj);		
+		}
+		else
+		{
+			pm.myPool.despawn(obj);
+		}
 	}
 }

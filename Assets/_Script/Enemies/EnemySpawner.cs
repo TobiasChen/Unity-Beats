@@ -11,11 +11,14 @@ public class EnemySpawner : MonoBehaviour
     public int SpawnCount;
     public float TimeBetweenWaves = 5f;
     public List<GameObject> Enemy;
-    public AnimationCurve curve;
-    
+    public AnimationCurve curve; 
     
     private void Start()
     {
+        curve.AddKey(0, 0);
+        curve.AddKey(0.25f, 0.3f);
+        curve.AddKey(0.75f, 0.6f);
+        curve.AddKey(1, 1);
         //Finds Camera
         Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         //Calculates the Distance from the middle to a corner
@@ -74,8 +77,12 @@ public class EnemySpawner : MonoBehaviour
     }
     IEnumerator Wavespawn(Vector2 position)
     {
-        //Finnally Spawns a new Enemy, then waits 0.5 Seconds until the next one is spawned, to keep Spacing between them.
-        Instantiate(Enemy[0], new Vector3(position.x, position.y, 0f), transform.rotation);
+        if (Enemy[0] != null)
+        {
+            //Finnally Spawns a new Enemy, then waits 0.5 Seconds until the next one is spawned, to keep Spacing between them.
+            SimplePool.Spawn(Enemy[0], new Vector3(position.x, position.y, 0f), transform.rotation);
+        }
+
         yield return new WaitForSeconds(0.5f);
     }
 

@@ -24,7 +24,7 @@ public class PlayerCollisionControlle : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		//print("Collision");
-		if (other.gameObject.tag == "enemy")
+		if (other.gameObject.tag == "Enemy")
 		{
 			if (PC.PlayerHealthPoints >= 1)
 			{

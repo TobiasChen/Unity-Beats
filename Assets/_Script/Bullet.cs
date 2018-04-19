@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : PooledObject {
 	public override string GetName()
 	{
-		return "bullet";
+		return "Bullet";
 	}
 	public override GameObject GetObject()
 	{
