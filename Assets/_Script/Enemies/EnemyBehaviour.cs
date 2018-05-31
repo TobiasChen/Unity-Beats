@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Networking;
 public class EnemyBehaviour : MonoBehaviour
 {
 	protected int HP;
@@ -17,7 +17,6 @@ public class EnemyBehaviour : MonoBehaviour
 
 	public virtual void OnEnable()
 	{
-		
 	}
 
 	// Update is called once per frame
@@ -45,7 +44,7 @@ public class EnemyBehaviour : MonoBehaviour
 
 	protected void EnemyDeath()
 	{
-			SimplePool.Despawn(gameObject);
+			//SimplePool.Despawn(gameObject);
 	}
 	protected virtual void KIBehaviour()
 	{

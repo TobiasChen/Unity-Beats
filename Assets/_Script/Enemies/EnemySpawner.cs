@@ -80,7 +80,7 @@ public class EnemySpawner : MonoBehaviour
         if (Enemy[0] != null)
         {
             //Finnally Spawns a new Enemy, then waits 0.5 Seconds until the next one is spawned, to keep Spacing between them.
-            SimplePool.Spawn(Enemy[0], new Vector3(position.x, position.y, 0f), transform.rotation);
+            //SimplePool.Spawn(Enemy[0], new Vector3(position.x, position.y, 0f), transform.rotation);
         }
 
         yield return new WaitForSeconds(0.5f);

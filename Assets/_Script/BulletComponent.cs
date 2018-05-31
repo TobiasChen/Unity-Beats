@@ -35,7 +35,7 @@ public class BulletComponent : MonoBehaviour
 	public void Destroy()
 	{
 		//print("Gameobject '" + gameObject.name + "' was disabled and returned to Pool");
-		SimplePool.Despawn(gameObject);
+		//SimplePool.Despawn(gameObject);
 	}
 
 	private void OnDisable()

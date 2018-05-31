@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : NetworkBehaviour {
 
 	// Use this for initialization
 	private Rigidbody2D rbPlayer;
@@ -19,6 +20,10 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per ;
 	void Update ()
 	{
+		if (!isLocalPlayer)
+		{
+			return;
+		}
 		//Rotation
 		ScreenPosition = Camera.main.WorldToScreenPoint(transform.position);	//Gets current Mouse Position
 		Vector3 direction = Input.mousePosition- ScreenPosition;
@@ -28,6 +33,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		if (!isLocalPlayer)
+		{
+			return;
+		}
 		//Horizontal and vertical Movement
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");

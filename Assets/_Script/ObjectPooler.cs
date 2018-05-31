@@ -2,14 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Networking;
 
 public static class SimplePool
 {
+
 	private static GameObject DynamicFolder = GameObject.FindGameObjectWithTag("DynamicFolder");
 	
 	private const int DEFAULT_POOL_SIZE = 25;
-	class Pool
+	public class Pool
 	{
 		private int nextID = 0;
 		//The Stack the Gameobjects are gpomg to be put on
@@ -23,8 +24,6 @@ public static class SimplePool
 			this.prefab = prefab;
 			inactivePool = new Stack<GameObject>(initialQty);
 		}
-
-
 		public GameObject Spawn(Vector3 position, Quaternion rotation)
 		{
 			GameObject obj;
@@ -51,11 +50,13 @@ public static class SimplePool
 			obj.transform.position = position;
 			obj.transform.rotation = rotation;
 			obj.SetActive(true);
+			//Debug.Log("ObjectPooler.Object.Spawn was called");
 			return obj;
 		}
 
 		public void despawn(GameObject obj)
 		{
+			//Debug.Log("ObjectPooler.Object.despawn was called");
 			obj.SetActive(false);
 			//The Objects get added on the top of the unused Stack
 			inactivePool.Push(obj);
@@ -65,13 +66,13 @@ public static class SimplePool
 	class PoolMember : MonoBehaviour
 	{
 		public Pool myPool;
-		
 	}
 	//A Dictionary of all current Pools, there can be only one Pool per Gameobject/Prefab
-	private static Dictionary<GameObject,  Pool> dictionaryOfPools;
+	public static Dictionary<GameObject,  Pool> dictionaryOfPools;
 	//Dictionary for the Folders of the new GameObjects
 	private static Dictionary<GameObject, GameObject> dictionaryOfFolders;
-	//The initialisation of the Dictionary,
+	
+	
 	public static void Init(GameObject prefab = null, int size = DEFAULT_POOL_SIZE)
 	{
 		//Creates the Dictionarys if they are not present
@@ -83,6 +84,7 @@ public static class SimplePool
 		{
 			dictionaryOfFolders = new  Dictionary<GameObject, GameObject>();
 		}
+
 		//If the prefab that is supposed to be spawned is not NULL, the two new keys are added to the dictionary
 		if (prefab != null)
 		{
@@ -109,33 +111,38 @@ public static class SimplePool
 			GameObject[] obs = new GameObject[size];
 		for (int i = 0; i < size; i++) 
 		{
-			obs[i] = Spawn (prefab, Vector3.zero, Quaternion.identity);
+			obs[i] = SpawnGameObject (prefab, Vector3.zero, Quaternion.identity);
 		}
 
 		// Now despawn them all.
 		for (int i = 0; i < size; i++) 
 		{
-			Despawn(obs[i]);
+			DespawnGameObject(obs[i]);
 		}
 	}
 
-	public static GameObject Spawn(GameObject prefab, Vector3 pos, Quaternion rot)
+	public static GameObject SpawnGameObject(GameObject prefab, Vector3 pos, Quaternion rot)
 	{
+		//Debug.Log("ObjectPooler.SpawnGameObject was called");
 		Init(prefab);
 		return dictionaryOfPools[prefab].Spawn(pos, rot);
 	}
-
-	public static void Despawn(GameObject obj)
+	
+	public static void DespawnGameObject(GameObject obj)
 	{
+		//Debug.Log(obj);
+		//Debug.Log(obj.GetComponent<PoolMember>());
 		PoolMember pm = obj.GetComponent<PoolMember>();
 		if (pm == null)
 		{
-		Debug.Log ("Object '" +obj.name+ "' wasn't spawned from a pool. Destroying it instead.");
-		GameObject.Destroy(obj);		
+			//Debug.Log ("Object '" +obj.name+ "' wasn't spawned from a pool. Destroying it instead.");
+			GameObject.Destroy(obj);		
 		}
 		else
 		{
+			//Debug.Log("ObjectPooler.DespawnGameObject was called and ObjectPooler.Object.despawn was called");
 			pm.myPool.despawn(obj);
 		}
 	}
+	
 }

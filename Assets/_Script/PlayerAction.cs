@@ -1,26 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.PackageManager;
 using UnityEngine;
-
-public class PlayerAction : MonoBehaviour
+using UnityEngine.Networking;
+public class PlayerAction : NetworkBehaviour
 {
+	public ServerPooling SV;
 	public GameObject BulletProjectile;
 	private float FireDelay;
 	private PlayerController PC;
+	private ClientPooling ClientPooling;
 
-	// Use this for initialization
 	void Start ()
 	{
-		SimplePool.Preload(BulletProjectile, 200);
+		ClientPooling = GameObject.Find("ServerPooling").GetComponent<ClientPooling> ();
 		PC = GetComponent<PlayerController>();
+		
 	}
 	
-	// Update is called once per frame
+
 	void Update ()
 	{
-		if (Input.GetButton("Fire1") && FireDelay == 0)
+		if (!isLocalPlayer)
 		{
-			Fire();
+			return;
+		}
+		if (Input.GetButtonDown("Fire1") && FireDelay == 0)
+		{
+			CmdFire();
 		}
 
 		if (FireDelay > 0)
@@ -30,9 +37,18 @@ public class PlayerAction : MonoBehaviour
 			FireDelay = 0;
 		}
 	}
+	[Command]
+	void CmdFire()
+	{
+		print("CommandFire was called");
+		GameObject temp = SimplePool.SpawnGameObject(BulletProjectile, transform.position,transform.rotation);
+		temp.GetComponent<Rigidbody2D>().velocity = transform.right * 40;
+		NetworkServer.Spawn(temp, ClientPooling._networkHash128);
+		Debug.Log("Spawned Gameobject: " + temp);
+
+	}
 
 	void Fire()
 	{
-		SimplePool.Spawn(BulletProjectile, transform.position, transform.rotation);
 	}
 }
